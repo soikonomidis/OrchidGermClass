@@ -24,7 +24,7 @@
 #' )
 #'
 #' # Get predictions
-#' predict_germination(my_orchids, model = "knn")
+#' predict_germination(my_orchids)
 #' }
 predict_germination <- function(new_data, model = c("knn", "svm")) {
 
