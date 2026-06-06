@@ -28,7 +28,7 @@ if (!file.exists(data_file)) {
   stop("Excel file not found. Ensure it is placed inside the 'data-raw' folder.")
 }
 
-
+message("Reading dataset and preparing data...")
 train_data <- readxl::read_xlsx(data_file) %>%
   rename(
     FG_perc = `FG%`,
@@ -50,20 +50,20 @@ ctrl <- trainControl(method = "cv", number = 5)
 set.seed(123)
 
 # 4. Train the Models
-
+message("Training KNN Model...")
 model_knn <- train(formula_step5, data = train_data, method = "knn",
                    trControl = ctrl,
                    preProcess = c("nzv", "center", "scale"),
                    tuneGrid = expand.grid(k = c(1, 3, 5, 7, 9)))
 
-
+message("Training SVM Model...")
 model_svm <- train(formula_step5, data = train_data, method = "svmRadial",
                    trControl = ctrl,
                    preProcess = c("nzv", "center", "scale"),
                    tuneLength = 5)
 
 # 5. Save the models internally into the package
-
+message("Saving models to R/sysdata.rda...")
 usethis::use_data(model_knn, model_svm, internal = TRUE, overwrite = TRUE)
 
-
+message("Done! Models are now permanently embedded in the package.")

@@ -81,3 +81,4 @@ predict_germination <- function(new_data, model = c("knn", "svm")) {
 
   return(new_data)
 }
+

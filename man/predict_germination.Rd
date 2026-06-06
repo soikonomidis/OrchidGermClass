@@ -25,10 +25,10 @@ potential of orchid species based on ecological and morphological traits.
 # Example usage with new data
 my_orchids <- data.frame(
   ES_ratio = c(0.45, 0.12),
-  Subfamily = c("Orchidoideae", "Orchidoideae"),
-  Growth_habit = c("Terrestrial", "Terrestrial"),
-  Habitat = c("Grassland", "Grassland"),
-  Climate_zone = c("Temperate", "Temperate")
+  Subfamily = c("O", "E"),
+  Growth_habit = c("T", "E"),
+  Habitat = c("O", "S"),
+  Climate_zone = c("Te", "Tr")
 )
 
 # Get predictions
