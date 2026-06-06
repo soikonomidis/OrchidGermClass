@@ -1,9 +1,9 @@
 Package: OrchidGermClass
-Title: What the Package Does (One Line, Title Case)
+Title: Orchid germination prediction
 Version: 1.0.0.000
 Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"))
-Description: What the package does (one paragraph).
+    person("Spyridon", "Oikonomidis", , "soikonomidis@biol.uoa.gr", role = c("aut", "cre"))
+Description: The present package aims to use seed morphological, habitat, phylogenetic data for orchid taxa to classify their germination with the goal to be used as an initial screening tool of germination behaviour for orchid species.
 License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
     license
 Encoding: UTF-8
